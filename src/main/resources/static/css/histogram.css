@@ -1,0 +1,82 @@
+header, main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.subheadings {
+  color: #b5131a
+}
+
+.container {
+  display: flex;
+}
+
+.left-container {
+  flex: 1;
+  background-color: #e9eff2;
+  /* Styles for container 1 */
+  margin-right: 7px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* Styles for containers 2 and 3 */
+  margin-left: 7px;
+  
+}
+
+.right-inner-container {
+  flex: 1;
+  /* Additional styles for containers 2 and 3 */
+} 
+.right-inner-container:first-child {
+  /* Adds pixels of margin at the bottom of the first inner container */
+  background-color: #E9EFF2;
+  margin-bottom: 7px;
+   
+ }
+ 
+ .right-inner-container:last-child {
+   background-color: #E9EFF2;
+   margin-top: 7px;
+ }  
+
+
+#lowbound {
+  width: 90%;
+  border-spacing: 10px;
+}
+
+td {
+  padding: 5px;
+}
+
+#gradeTable td {
+  padding-right: 130px; /* Adjust the value to increase or decrease the width between columns */
+  border-spacing: 100px;
+  text-align: left;
+}
+
+.graph-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #b5131a;
+  transition: width 0.5s ease;
+
+}
+
+.graph-label {
+  font-size: 15px;
+  color: black;
+  text-align: left;
+}
+
+.graph-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+

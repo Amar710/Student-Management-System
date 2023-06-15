@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Students</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .student-box {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+            color: black;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        p span {
+        color: rgb(108, 196, 225)
+        }
+    </style>
+    
+    <div class="container">
+        <h1 class="mt-4">View Students</h1>
+        
+        <!-- Iterate over the students and create a div box for each -->
+        <div>
+            <div th:each="student : ${students}" th:style="'background-color:' + ${student.hairColor} + '; width:' + ${student.weight * 5} + 'px; height:' + ${student.height *2.5} + 'px;'" class="student-box">
+                <p><span style="color: rgb(108, 196, 225);">ID:</span> <span th:text="${student.id}"></span></p>
+                <p><span style="color: rgb(108, 196, 225);">Name:</span> <span th:text="${student.name}"></span></p>
+                <p><span style="color: rgb(108, 196, 225);">GPA:</span> <span th:text="${student.gpa}"></span></p>
+                
+                
+                <!-- Edit Button -->
+                <form method="get" action="/students/edit" style="display: inline;">
+                    <input type="hidden" name="uid" th:value="${student.uid}">
+                    <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                </form>
+
+                <!-- Delete Button -->
+                <form method="post" action="/students/delete" style="display: inline;">
+                    <input type="hidden" name="uid" th:value="${student.uid}">
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

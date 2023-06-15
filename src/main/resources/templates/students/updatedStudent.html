@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Updated Student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Updated Student</h1>
+        <p>ID: <span th:text="${student.id}"></span></p>
+        <p>Name: <span th:text="${student.name}"></span></p>
+        <p>Weight: <span th:text="${student.weight}"></span></p>
+        <p>Height: <span th:text="${student.height}"></span></p>
+        <p>Hair Color: <span th:text="${student.hairColor}"></span></p>
+        <p>GPA: <span th:text="${student.gpa}"></span></p>
+    </div>
+</body>
+</html>

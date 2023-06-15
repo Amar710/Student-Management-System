@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Add Student</h1>
+        <form method="post" action="/students/add">
+            <div class="form-group">
+                <label for="studentId">Student ID:</label>
+                <input type="number" class="form-control" name="studentId" id="studentId" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight KG:</label>
+                <input type="number" class="form-control" name="weight" id="weight" step="0.01" max="125" min="25" required>
+            </div>
+            <div class="form-group">
+                <label for="height">Height CM:</label>
+                <input type="number" class="form-control" name="height" id="height" step="0.01" max="250" min="50" required>
+            </div>
+            <div class="form-group">
+                <label for="hairColor">Hair Color:</label>
+                <input type="text" class="form-control" name="hairColor" id="hairColor" required>
+            </div>
+            <div class="form-group">
+                <label for="gpa">GPA:</label>
+                <input type="number" class="form-control" name="gpa" id="gpa" step="0.01" max="4.33" min="0" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Student</button>
+        </form>
+    </div>
+</body>
+</html>
