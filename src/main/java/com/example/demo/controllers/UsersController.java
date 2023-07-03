@@ -74,7 +74,7 @@ public class UsersController {
         else {
             // success login
             User user = userList.get(0);
-            request.getSession().setAttribute("sessuin_user", user);
+            request.getSession().setAttribute("session_user", user);
             model.addAttribute("user", user);
             return "users/protected";
         }
